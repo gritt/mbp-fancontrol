@@ -62,11 +62,11 @@ The script uses the `sensors` command to `grep` the current higher temperature, 
     temp1:        +37.1°C
 
 
-With this outupt you'll be able to identify the sensor with the higher temperature, which will probably be th CPU / GPU, in my case this sensor was the *TCPD* which is used in the `grep` command.
+With this output you'll be able to identify the sensor with the higher temperature, which will probably the CPU / GPU, in my case this sensor was the *TCPD* which is used in the `grep` command.
 
 
 ## Fan system file
-Also, the system file which controls the fan speed may change depending of you hardware, for me it is:
+Also, the system file which controls the fan speed may change depending of your hardware, for me it is:
 
     /sys/devices/platform/applesmc.768/fan1_min
 
@@ -89,4 +89,4 @@ And your done!
 
 ## Warning!
 
-Please procceed with caution, you don't wanna set your fan speed to zero and damage your computer, so, test this script in an empty file, read, modify, and undestand the contents before executing it.
+Please proceed with caution, you don't wanna set your fan speed to zero and damage your computer, so, test this script in an empty file, read, modify, and understand the contents before executing it.

@@ -4,6 +4,7 @@ If you use linux in your macbook, you may notice that it gets quite hot, while k
 
 It's a simple shell, with static system paths, so please modify as you need, on monitor.sh you' ll find:
 
+## Variables
 
     # initial temperature, which this script will start to act
     INI_TEMP=59

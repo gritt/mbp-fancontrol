@@ -23,7 +23,7 @@ It's a simple shell, with static system paths, so please modify as you need, on 
 
 
 ## Sensors
-The script uses the *sensors* command to grep the current higher temperature, so you must have this command available in your system, *sensors* should give you an output similar to this one:
+The script uses the `sensors` command to `grep` the current higher temperature, so you must have this command available in your system, `sensors` should give you an output similar to this one:
 
 
     applesmc-isa-0300
@@ -62,7 +62,7 @@ The script uses the *sensors* command to grep the current higher temperature, so
     temp1:        +37.1°C
 
 
-With this outupt you'll be able to identify the sensor with the higher temperature, which will probably be th CPU / GPU, in my case this sensor was the *TCPD* which is used in the *grep* command.
+With this outupt you'll be able to identify the sensor with the higher temperature, which will probably be th CPU / GPU, in my case this sensor was the *TCPD* which is used in the `grep` command.
 
 
 ## Fan system file
@@ -70,7 +70,7 @@ Also, the system file which controls the fan speed may change depending of you h
 
     /sys/devices/platform/applesmc.768/fan1_min
 
-If you *cat* this file, you'll see it has only one number, which is the fan RPM.
+If you `cat` this file, you'll see it has only one number, which is the fan RPM.
 
 
 ## Crontab setup

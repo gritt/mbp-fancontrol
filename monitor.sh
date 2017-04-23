@@ -1,7 +1,7 @@
 #!/bin/bash
 
-INI_TEMP=50
-MAX_TEMP=80
+INI_TEMP=59
+MAX_TEMP=89
 
 MIN_RPM=2100
 MAX_RPM=5000
@@ -27,11 +27,16 @@ then
     TMP=$((CUR_TEMP * MAX_RPM))
     
     CUR_RPM=$((TMP / MAX_TEMP))
+
+    # run at minimum speed at least
+    if [ $MIN_RPM -gt $CUR_RPM ]
+    then
+        $CUR_RPM=$MIN_RPM
+    fi
 fi
 
 echo "Adjusting fan speed to ${CUR_RPM} RPMs"
 
+echo $CUR_RPM > /sys/devices/platform/applesmc.768/fan1_min
 
-# todo
-# if the current temperature is above 90% of the safe limit defined, activate hardware saving mode
-# will set the rpm to 5850 rpm and play some alarm
+echo "Done!"

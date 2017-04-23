@@ -9,7 +9,7 @@ It's a simple shell, with static system paths, so please modify as you need, on 
     # initial temperature, which this script will start to act
     INI_TEMP=59
 
-    # minimum fan speed your system will operate
+    # maximum temperature your system should operate
     MAX_TEMP=89
 
     # minimum fan speed your system will operate
